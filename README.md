@@ -65,7 +65,7 @@ git clone https://github.com/nishita-rana/Human_Action_Recognition.git
 ```
 ---
 
-##📊 Results
+## 📊 Results
 
 Achieved high accuracy on UCF50 dataset (values can be updated after final testing).
 
