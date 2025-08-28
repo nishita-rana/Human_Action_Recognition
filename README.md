@@ -61,5 +61,21 @@ Make sure you have the following installed:
 
 ### 📥 Clone Repository
 ```bash
-git clone https://github.com/yourusername/HAR-CNN-LSTM.git
-cd HAR-CNN-LSTM
+git clone https://github.com/nishita-rana/Human_Action_Recognition.git
+```
+
+##📦 Install Dependencies
+
+pip install -r requirements.txt
+
+##📊 Results
+
+Achieved high accuracy on UCF50 dataset (values can be updated after final testing).
+
+##🔮 Future Work
+
+Incorporating attention mechanisms for improved accuracy.
+
+Extending to real-time recognition using webcam feed.
+
+Exploring transformer-based models for HAR.
