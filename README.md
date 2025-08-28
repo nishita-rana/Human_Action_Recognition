@@ -15,7 +15,7 @@ The goal is to classify human activities from video sequences by leveraging both
 ---
 
 ## 📂 Dataset
-**Dataset Used:** [UCF50 Human Action Dataset](https://www.crcv.ucf.edu/data/UCF50.php)  
+**Dataset Used:** https://www.kaggle.com/datasets/pypiahmad/realistic-action-recognition-ucf50?resource=download-directory  
 
 **Subset of Activities considered in this project:**
 - Downstairs  
