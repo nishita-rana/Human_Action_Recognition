@@ -64,11 +64,8 @@ Make sure you have the following installed:
 git clone https://github.com/nishita-rana/Human_Action_Recognition.git
 ```
 
-##📦 Install Dependencies
 
-pip install -r requirements.txt
-
-##📊 Results
+###📊 Results
 
 Achieved high accuracy on UCF50 dataset (values can be updated after final testing).
 
