@@ -1,76 +1,65 @@
-Human Activity Recognition using CNN and LSTM
-📌 Overview
+# 🏃 Human Activity Recognition using CNN + LSTM
 
-This project implements Human Activity Recognition (HAR) using a hybrid Convolutional Neural Network (CNN) and Long Short-Term Memory (LSTM) architecture.
-The model is trained on the UCF50 dataset, which contains 50 human action categories. The goal is to classify human activities from video sequences by leveraging both spatial features (via CNNs) and temporal dynamics (via LSTMs/ConvLSTMs).
+This project implements **Human Activity Recognition (HAR)** using a hybrid **Convolutional Neural Network (CNN)** and **Long Short-Term Memory (LSTM/ConvLSTM)** architecture.  
+The model is trained on the **UCF50 dataset**, which contains 50 human action categories.  
+The goal is to classify human activities from video sequences by leveraging both **spatial features (via CNNs)** and **temporal dynamics (via LSTMs/ConvLSTMs)**.
 
-Applications include:
+---
 
-🏥 Healthcare – patient monitoring, fall detection
+## 📌 Applications
+- 🏥 **Healthcare** – patient monitoring, fall detection  
+- 👮 **Public Safety** – surveillance & anomaly detection  
+- ⚽ **Sports Analytics** – performance tracking and improvement  
+- 🖥 **Human-Computer Interaction** – gesture/activity recognition  
 
-👮 Public safety – surveillance & anomaly detection
+---
 
-⚽ Sports analytics – performance monitoring
+## 📂 Dataset
+**Dataset Used:** [UCF50 Human Action Dataset](https://www.crcv.ucf.edu/data/UCF50.php)  
 
-🖥 Human-computer interaction – gesture/activity recognition
+**Subset of Activities considered in this project:**
+- Downstairs  
+- Jogging  
+- Sitting  
+- Standing  
+- Upstairs  
+- Walking  
 
-📂 Dataset
+---
 
-Dataset Used: UCF50 Human Action Dataset
+## ⚙ Data Preprocessing
+Before training, the dataset undergoes the following preprocessing steps:
+1. **Label Encoding** – Convert activity names into numeric labels  
+2. **Linear Interpolation** – Handle missing values in frames  
+3. **Data Splitting** – 70% training, 15% validation, 15% testing  
+4. **Normalization** – Scale pixel values to `[0,1]`  
+5. **Segmentation** – Split video into equal-sized clips  
+6. **One-Hot Encoding** – Convert labels into binary vectors  
 
-Activities Considered (subset):
+---
 
-Downstairs
+## 🏗 Model Architecture
+The HAR model uses a **ConvLSTM-based hybrid design** for spatiotemporal learning.
 
-Jogging
+- **Input Layer:** Video frames `(T, H, W, 3)`  
+- **ConvLSTM2D Layers:** 64, 128, 256 filters for spatiotemporal feature extraction  
+- **MaxPooling3D Layers:** Reduce spatial dimensions  
+- **Dropout Layers:** Prevent overfitting  
+- **Flatten Layer:** Convert 5D tensor to 1D vector  
+- **Dense + Softmax Output:** Classify into activity categories  
 
-Sitting
+---
 
-Standing
+## 🚀 Installation & Usage
 
-Upstairs
+### 🔧 Requirements
+Make sure you have the following installed:
+- Python `3.8+`  
+- TensorFlow / Keras  
+- NumPy, Pandas, Matplotlib  
+- OpenCV  
 
-Walking
-
-⚙ Data Preprocessing
-
-The dataset undergoes several preprocessing steps before training:
-
-Label Encoding – Converts activity names into numeric labels.
-
-Linear Interpolation – Handles missing values in frames.
-
-Data Split – 70% training, 15% validation, 15% testing.
-
-Normalization – Scales pixel values (0–1).
-
-Segmentation – Splits video into equal-sized clips.
-
-One-Hot Encoding – Converts labels into binary vectors for multi-class classification.
-
-🏗 Model Architecture
-
-The model is a ConvLSTM-based hybrid designed for spatiotemporal learning:
-
-Input Layer: Video frames (T, H, W, 3)
-
-ConvLSTM2D Layers (64, 128, 256 filters) – Extract temporal and spatial features
-
-MaxPooling3D Layers – Reduce spatial dimensions
-
-Dropout Layers – Prevent overfitting
-
-Flatten Layer – Converts 5D tensor to 1D feature vector
-
-Dense + Softmax Output – Classifies into activities
-
-🚀 Installation & Usage
-🔧 Requirements
-
-Python 3.8+
-
-TensorFlow / Keras
-
-NumPy, Pandas, Matplotlib
-
-OpenCV
+### 📥 Clone Repository
+```bash
+git clone https://github.com/yourusername/HAR-CNN-LSTM.git
+cd HAR-CNN-LSTM
